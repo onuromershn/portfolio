@@ -9,6 +9,8 @@
     <!--Link to Css-->
     <link rel="stylesheet" href="{{ asset('assets/css/line-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <!--animateon scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/8d9a94d7ba.js" crossorigin="anonymous"></script>
 
     <title>Onur Omer</title>
@@ -17,7 +19,7 @@
 <!-- =============START NAV============-->
     <nav>
         <div class="container nav__container">
-            <a href="#" class="nav__logo">
+            <a href="{{ path('app_base') }}" class="nav__logo">
                 <img src="{{ asset('assets/img/code.png') }}" alt="Navbar Logo">
             </a>
             <ul class="nav__menu">
@@ -39,10 +41,10 @@
 <!-- =============START OF HEADER============-->
     <header id="home">
         <div class="container header__container">
-            <article class="header__image">
+            <article class="header__image" data-aos="fade-up" data-aos-delay="600">
                 <div><img src="{{ asset('assets/img/omer_homepage.png') }}" alt="Header Image"></div>
             </article>
-            <article class="header__content">
+            <article class="header__content" data-aos="fade-in">
                 <h4>Merhaba, Ben <span>Onur Ömer ŞAHİN</span></h4>
                 <h1>İşinizi doğru yoldan internete taşıyın</h1>
                 <p>İşletmenizi çevrimiçi hale getirmek için profesyonel bir geliştirici mi arıyorsunuz? Doğru yere geldiniz. </p>
@@ -69,7 +71,7 @@
             <div class="about__image">
                 <img src="{{ asset('assets/img/omer.png') }}" alt="About Image">
             </div>
-            <div class="about__details">
+            <div class="about__details" data-aos="fade-in" data-aos-delay="300">
                 <h1>Hakkımda</h1>
                 <div class="about__cards">
                     <article class="about__card">
@@ -118,7 +120,7 @@
                     </div>
                 </li>
             </ul>
-            <article class="services__right">
+            <article class="services__right" data-aos="fade-in" data-aos-delay="200">
             </article>
         </div>
     </section>
@@ -133,7 +135,7 @@
             <li data-filter=".backend">Backend</li>
             <li data-filter=".fullstack">Fullstack</li>
         </ul>
-        <div class="container projects__container">
+        <div class="container projects__container" data-aos="fade-in">
             <article class="project mix fullstack" data-order="1">
                 <div class="project__image">
                     <img src="{{ asset('assets/img/project1.jpg') }}" alt="Project Image One">
@@ -186,20 +188,20 @@
     <section class="contact" id="contact">
         <div class="container contact__container">
             <ul class="contact__list ">
-                <li><a href="mailto:onuromersahin@gmail.com" class="contact__list-item" target="_blank">
+                <li data-aos="fade-in"><a href="mailto:onuromersahin@gmail.com" class="contact__list-item" target="_blank">
                         <i class="fa-regular fa-envelope"></i>
                     </a>
                 </li>
-                <li><a href="https://wa.me/+905071666930" class="contact__list-item" target="_blank">
+                <li data-aos="fade-in" data-aos-delay="150"><a href="https://wa.me/+905071666930" class="contact__list-item" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </li>
-                <li><a href="tel:+905071666930" class="contact__list-item" target="_blank">
+                <li data-aos="fade-in" data-aos-delay="300"><a href="tel:+905071666930" class="contact__list-item" target="_blank">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </a>
                 </li>
             </ul>
-            <form action="https://formsubmit.co/22b9db1211784fe51b0d1dc0db19143a" method="POST" class="contact__form">
+            <form action="https://formsubmit.co/22b9db1211784fe51b0d1dc0db19143a" method="POST" class="contact__form" data-aos="fade-up" data-aos-delay="500">
                 <input type="text" name="isim" placeholder="İsim Soyisim">
                 <input type="email" name="email" placeholder="Mail Adresiniz">
                 <input type="text" name="subject" placeholder="Konu">
@@ -214,17 +216,17 @@
     <footer>
         <div class="container footer__container">
             <ul class="footer__menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="footer__social">
-                <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                <li data-aos="flip-up" data-aos-delay="150"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li data-aos="flip-up" data-aos-delay="300"><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li data-aos="flip-up" data-aos-delay="450"><a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li data-aos="flip-up" data-aos-delay="600"><a href="https://youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </div>
         <div class="footer__copyright">
@@ -243,5 +245,9 @@
 <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
 <script src="{{ asset('assets/js/data.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({duration: 1500,offset: 80});
+</script>
 </body>
 </html>
